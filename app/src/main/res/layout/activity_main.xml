@@ -8,57 +8,57 @@
     android:orientation="vertical"
     android:paddingHorizontal="30dp">
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Numar 1"/>
-        <EditText
-            android:id="@+id/numar_1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="10"/>
-    </LinearLayout>
+<!--    <LinearLayout-->
+<!--        android:orientation="horizontal"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content">-->
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Numar 1"/>-->
+<!--        <EditText-->
+<!--            android:id="@+id/numar_1"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:hint="10"/>-->
+<!--    </LinearLayout>-->
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:text="Numar 2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-        <EditText
-            android:id="@+id/numar_2"
-            android:hint="10"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-    </LinearLayout>
+<!--    <LinearLayout-->
+<!--        android:orientation="horizontal"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content">-->
+<!--        <TextView-->
+<!--            android:text="Numar 2"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"/>-->
+<!--        <EditText-->
+<!--            android:id="@+id/numar_2"-->
+<!--            android:hint="10"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"/>-->
+<!--    </LinearLayout>-->
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:text="Operatie"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-        <Button
-            android:id="@+id/operatie"
-            android:text="Plus"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="SelectOperatie"/>
-    </LinearLayout>
+<!--    <LinearLayout-->
+<!--        android:orientation="horizontal"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content">-->
+<!--        <TextView-->
+<!--            android:text="Operatie"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"/>-->
+<!--        <Button-->
+<!--            android:id="@+id/operatie"-->
+<!--            android:text="Plus"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:onClick="SelectOperatie"/>-->
+<!--    </LinearLayout>-->
 
     <Button
         android:id="@+id/calculeaza"
-        android:text="Calculeaza"
+        android:text="Start"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="ShowDialog"/>
+        android:onClick="GoToGame"/>
 
 </LinearLayout>

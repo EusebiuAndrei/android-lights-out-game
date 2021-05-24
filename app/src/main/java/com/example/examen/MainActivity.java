@@ -29,6 +29,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void GoToGame(View view) {
+        Intent i = new Intent(this, SecondActivity.class);
+        startActivity(i);
+    }
+
     public void SelectOperatie(View view) {
         PopupMenu popupMenu = new PopupMenu(this, view);
         popupMenu.getMenuInflater().inflate(R.menu.calc_menu, popupMenu.getMenu());

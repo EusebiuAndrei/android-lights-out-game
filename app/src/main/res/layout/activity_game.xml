@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameActivity"
+    android:orientation="vertical"
+    android:paddingHorizontal="30dp">
+
+<!--    <GridLayout-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:rowCount="3"-->
+<!--        android:columnCount="3">-->
+<!--                    <Button-->
+<!--                        android:id="@+id/l1c1"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:background="#fff"-->
+<!--                        android:backgroundTint="#fff"-->
+<!--                        tools:targetApi="lollipop" />-->
+<!--                    <Button-->
+<!--                        android:id="@+id/l1c2"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_marginHorizontal="10dp"/>-->
+<!--                    <Button-->
+<!--                        android:id="@+id/l1c3"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"/>-->
+<!--    </GridLayout>-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical"-->
+<!--        android:background="@color/black"-->
+<!--        android:padding="10dp">-->
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal">-->
+<!--            <Button-->
+<!--                android:id="@+id/l1c1"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:background="#fff"-->
+<!--                android:backgroundTint="#fff"-->
+<!--                tools:targetApi="lollipop" />-->
+<!--            <Button-->
+<!--                android:id="@+id/l1c2"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_marginHorizontal="10dp"/>-->
+<!--            <Button-->
+<!--                android:id="@+id/l1c3"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:layout_height="match_parent"/>-->
+<!--        </LinearLayout>-->
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal">-->
+<!--            <Button-->
+<!--                android:id="@+id/l2c1"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:background="#fff"-->
+<!--                android:backgroundTint="#fff"-->
+<!--                tools:targetApi="lollipop" />-->
+<!--            <Button-->
+<!--                android:id="@+id/l2c2"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_marginHorizontal="10dp"/>-->
+<!--            <Button-->
+<!--                android:id="@+id/l2c3"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:layout_height="match_parent"/>-->
+<!--        </LinearLayout>-->
+<!--    </LinearLayout>-->
+
+</LinearLayout>
