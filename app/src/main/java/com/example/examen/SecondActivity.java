@@ -64,6 +64,11 @@ public class SecondActivity extends AppCompatActivity {
         Log.d("SOL", puzzleSolver.solToString());
     }
 
+    public void GoBackHome(View view) {
+        Intent i = new Intent(this, MainActivity .class);
+        startActivity(i);
+    }
+
     public void HandleToggleTile(View view) {
         toggle(view.getId());
     }

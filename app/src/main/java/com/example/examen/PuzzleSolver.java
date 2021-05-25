@@ -49,12 +49,18 @@ public class PuzzleSolver {
 
         if (mini == 0) return "";
 
-        for(int i = 1; i <= mini; i++) {
+        int i;
+        for(i = 1; i < mini; i++) {
             solString.append(final_sol_x[i]);
             solString.append(":");
             solString.append(final_sol_y[i]);
             solString.append("|||");
         }
+        solString.append(final_sol_x[i]);
+        solString.append(":");
+        solString.append(final_sol_y[i]);
+
+        solString.append('\n');
 
         return solString.toString();
     }

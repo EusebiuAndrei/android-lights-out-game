@@ -54,8 +54,6 @@ public class PuzzleGenerator {
         StringBuilder matrixString = new StringBuilder();
         int i, j;
 
-        matrixString.append("\n\n");
-
         for (i = 1; i <= 3; i++) {
             for (j = 1; j <= 3; j++) {
                 matrixString.append(boolToInt(matrix[i][j]));
