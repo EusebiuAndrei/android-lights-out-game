@@ -8,6 +8,9 @@ public class PuzzleGenerator {
 
         do {
             matrix = generatePuzzle();
+            matrix[1][1] = true; matrix[1][2] = false; matrix[1][3] = true;
+            matrix[2][1] = true; matrix[2][2] = false; matrix[2][3] = true;
+            matrix[3][1] = false; matrix[3][2] = false; matrix[3][3] = false;
         } while (!isSolvable(matrix));
 
         return matrix;

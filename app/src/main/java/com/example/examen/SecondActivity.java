@@ -1,12 +1,15 @@
 package com.example.examen;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import java.util.HashMap;
 
@@ -59,9 +62,9 @@ public class SecondActivity extends AppCompatActivity {
 
         Log.d("PUZZLE", PuzzleGenerator.toString(game.puzzle));
 
-//        PuzzleSolver puzzleSolver = PuzzleSolver.solve(game);
-//        Log.d("STEPS", Integer.toString(puzzleSolver.mini));
-//        Log.d("SOL", puzzleSolver.solToString());
+        PuzzleSolver puzzleSolver = PuzzleSolver.solve(game);
+        Log.d("STEPS", Integer.toString(puzzleSolver.mini));
+        Log.d("SOL", puzzleSolver.solToString());
     }
 
     public void GoBackHome(View view) {
@@ -70,7 +73,30 @@ public class SecondActivity extends AppCompatActivity {
     }
 
     public void HandleToggleTile(View view) {
-        toggle(view.getId());
+        if (!game.isSolved()) toggle(view.getId());
+
+        if (game.isSolved()) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setTitle("You won");
+            builder.setMessage("Do you want to play another game?");
+
+            builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    game = new Game();
+                    initializeGridFromPuzzle();
+                }
+            });
+            builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+
+                }
+            });
+
+            AlertDialog alertDialog = builder.create();
+            alertDialog.show();
+        }
     }
 
     private void toggleTile(int id) {
