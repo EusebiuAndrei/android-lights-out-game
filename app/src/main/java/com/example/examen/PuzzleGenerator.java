@@ -8,9 +8,9 @@ public class PuzzleGenerator {
 
         do {
             matrix = generatePuzzle();
-            matrix[1][1] = true; matrix[1][2] = false; matrix[1][3] = true;
-            matrix[2][1] = true; matrix[2][2] = false; matrix[2][3] = true;
-            matrix[3][1] = false; matrix[3][2] = false; matrix[3][3] = false;
+//            matrix[1][1] = true; matrix[1][2] = false; matrix[1][3] = true;
+//            matrix[2][1] = true; matrix[2][2] = false; matrix[2][3] = true;
+//            matrix[3][1] = false; matrix[3][2] = false; matrix[3][3] = false;
         } while (!isSolvable(matrix));
 
         return matrix;
@@ -38,15 +38,15 @@ public class PuzzleGenerator {
 
         for (i = 1; i <= 3; i++) {
             for (j = 1; j <= 3; j++) {
-                rows[i] += boolToInt(matrix[i][j]);
-                cols[j] += boolToInt(matrix[i][j]);
+                rows[i] += matrix[i][j] == true ? 1 : 0; // boolToInt(matrix[i][j]);
+                cols[j] += matrix[i][j] == true ? 1 : 0; // boolToInt(matrix[i][j]);
             }
         }
 
         for (i = 1; i <= 3; i++) {
-            if (rows[i] % 2 != 0)
+            if (rows[i] % 2 != 0 || rows[i] == 0)
                 return false;
-            if (cols[i] % 2 != 0)
+            if (cols[i] % 2 != 0 || cols[i] == 0)
                 return false;
         }
 

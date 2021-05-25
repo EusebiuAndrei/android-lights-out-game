@@ -10,6 +10,7 @@ public class Game {
     }
 
     Game(boolean[][] puzzle) {
+        this.puzzle = new boolean[5][5];
         for (int i = 1; i <= 3; i++) {
             for (int j = 1; j <= 3; j++) {
                 this.puzzle[i][j] = puzzle[i][j];
@@ -20,7 +21,7 @@ public class Game {
     public boolean isSolved() {
         for (int i = 1; i <= 3; i++) {
             for (int j = 1; j <= 3; j++) {
-                if (puzzle[i][j])
+                if (!puzzle[i][j])
                     return false;
             }
         }

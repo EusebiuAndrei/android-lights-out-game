@@ -18,6 +18,8 @@ public class SecondActivity extends AppCompatActivity {
     public HashMap<String, Integer> positionToIdMap = new HashMap<>();
 
     Game game = new Game();
+    int nrOfMoves = 0;
+    int minNrOfMoves;
 
     public void initializeIdToPositionMap() {
         idToPositionMap.put(R.id.l1c1, "1_1");
@@ -62,9 +64,10 @@ public class SecondActivity extends AppCompatActivity {
 
         Log.d("PUZZLE", PuzzleGenerator.toString(game.puzzle));
 
-        PuzzleSolver puzzleSolver = PuzzleSolver.solve(game);
-        Log.d("STEPS", Integer.toString(puzzleSolver.mini));
-        Log.d("SOL", puzzleSolver.solToString());
+//        PuzzleSolver puzzleSolver = PuzzleSolver.solve(game);
+//        minNrOfMoves = puzzleSolver.mini;
+        minNrOfMoves = PuzzleSolver.solve(game.puzzle);
+        Log.d("STEPS", Integer.toString(minNrOfMoves));
     }
 
     public void GoBackHome(View view) {
@@ -72,19 +75,41 @@ public class SecondActivity extends AppCompatActivity {
         startActivity(i);
     }
 
+    public String getPerformance() {
+        if (nrOfMoves == minNrOfMoves) {
+            return "You won: S grade";
+        } else if (nrOfMoves < 2 * minNrOfMoves) {
+            return "You won: A grade";
+        } else if (nrOfMoves < 3 * minNrOfMoves) {
+            return "You won: B grade";
+        }
+
+        return "You won: never give up";
+    }
+
+    public String getDialogText() {
+        return "You solved the puzzle in " + nrOfMoves +
+                "moves. The minimum number of moves was " + minNrOfMoves +
+                ".Do you want to play another game?";
+    }
+
     public void HandleToggleTile(View view) {
-        if (!game.isSolved()) toggle(view.getId());
+        if (!game.isSolved()) {
+            toggle(view.getId());
+            nrOfMoves++;
+        }
 
         if (game.isSolved()) {
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
-            builder.setTitle("You won");
-            builder.setMessage("Do you want to play another game?");
+            builder.setTitle(getPerformance());
+            builder.setMessage(getDialogText());
 
             builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     game = new Game();
                     initializeGridFromPuzzle();
+                    nrOfMoves = 0;
                 }
             });
             builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
