@@ -59,9 +59,9 @@ public class SecondActivity extends AppCompatActivity {
 
         Log.d("PUZZLE", PuzzleGenerator.toString(game.puzzle));
 
-        PuzzleSolver puzzleSolver = PuzzleSolver.solve(game);
-        Log.d("STEPS", Integer.toString(puzzleSolver.mini));
-        Log.d("SOL", puzzleSolver.solToString());
+//        PuzzleSolver puzzleSolver = PuzzleSolver.solve(game);
+//        Log.d("STEPS", Integer.toString(puzzleSolver.mini));
+//        Log.d("SOL", puzzleSolver.solToString());
     }
 
     public void GoBackHome(View view) {

@@ -34,6 +34,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
     }
 
+    public void ExitApp(View view) {
+        finish();
+        System.exit(0);
+    }
+
     public void SelectOperatie(View view) {
         PopupMenu popupMenu = new PopupMenu(this, view);
         popupMenu.getMenuInflater().inflate(R.menu.calc_menu, popupMenu.getMenu());
