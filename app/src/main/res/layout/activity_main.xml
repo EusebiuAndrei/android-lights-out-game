@@ -6,18 +6,22 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:orientation="vertical"
-    android:paddingHorizontal="30dp">
+    android:paddingHorizontal="30dp"
+    android:layout_marginTop="200dp">
 
     <Button
         android:text="Start"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="GoToGame"/>
+        android:onClick="GoToGame"
+        android:background="#00edba"/>
 
     <Button
         android:text="Exit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="ExitApp"/>
+        android:onClick="ExitApp"
+        android:background="#00edba"
+        android:layout_marginTop="10dp"/>
 
 </LinearLayout>
